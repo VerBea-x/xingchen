@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #ecf0f3;
+        }
+        p {
+            background-color: #d1d9e6;
+            padding: 5px;
+            line-height: 40px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <p class="first">一、<br>1.数字，字符串，布尔，空（null），未定义（undefined），非数字（NaN），对象（object），新类型表示独一无二的值（symbol）<br>2.数字不分浮点和整数值、没有字符型、有更多表示false的值如undefined NaN、声明变量时不用说明类型、单独一行不用添加；、%可用于浮点数计算、有三符号相连的新运算符如“===”表示数据和类型相等</p>
+    <p class="second">二、<br>1.typeof+数据 返回“字符串”形式<br>2.检验的数据+instanceof+对象名（大小写） 适合做条件选择容易出错，已经知道类型时使用<br>3.用console打印Object.prototype.toString.call(数据) 适用于所有类型的检测，在Object的原型上返还数据类型<br>4.console.log(数据A.constructor === 数据B) null和undefined没有constuctor，判断数字时要用（数字），在类继承时会出错会被Object覆盖<br>5.jQuery.type 需要引用iquery文件，万能，null和undefined会返回原值<br>6.用严格运算符判断即"==="利用if打印正确和错误标志 </p>
+    <p class="third">三、<br>1.dom操作元素样式可随用户的活动事件改变，增加了网页的可互动性；css操作是预先给定的，用户无法改变。更喜欢js改比较方便。<br>2.css适合做页面呈现的画面，js拿来做动画。</p>
+    <p class="fourth">四、<br>1.先触发子元素的事件再是父元素的事件<br>2.事件循环机制（事件触发时就调用对应处理方式），异步操作（发送任务给其他模块完成），web workers</p>
+</body>
+</html>

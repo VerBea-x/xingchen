@@ -1,0 +1,37 @@
+[
+    {"name":"Die For You (为你而战)",
+    "audio_url":"../网页/audio/无畏契约 _ Grabbitz - Die For You (为你而战).flac",
+    "singer":"无畏契约/Grabbitz",
+    "album":"Die For You (为你而战)",
+    "cover":"../网页/image/Die For You (为你而战).jpg",
+    "time":"03:32"},
+
+    {"name":"1年2ヶ月20日 (1年2个月20天)",
+    "audio_url":"../网页/audio/BRIGHT - 1年2ヶ月20日 (一年二个月又二十天、1年2个月20天) (一年二个月又二十天) (TV版_Single Version).ogg",
+    "singer":"BRIGHT",
+    "album":"LOVE~ある愛のカタチ~",
+    "cover":"../网页/image/1年2ヶ月20日 .jpg",
+    "time":"03:02"},
+
+    {"name":"Titan",
+    "audio_url":"../网页/audio/Starlyte - Titan.flac",
+    "singer":"Starlyte",
+    "album":"Ninety9lives 93: Finish Him",
+    "cover":"../网页/image/Titan.jpg",
+    "time":"03:38"},
+
+    {"name":"이젠 남 (Now, we are strangers)",
+    "audio_url":"../网页/audio/Noblesse - 이젠 남 (Now, we are strangers) (现在是陌生人) (Inst_).flac",
+    "singer":"Noblesse (노블레스)",
+    "album":"이젠 남 (Now, we are strangers)",
+    "cover":"../网页/image/Noblesse (노블레스)_이젠 남 (Now, we are strangers)_0.jpg",
+    "time":"03:45"},
+
+    {"name":"Hustler",
+    "audio_url":"../网页/audio/Zayde Wølf - Hustler.flac",
+    "singer":"Zayde Wølf",
+    "album":"Golden Age",
+    "cover":"../网页/image/hustler.jpg",
+    "time":"03:14"}
+
+]

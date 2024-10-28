@@ -1,0 +1,13 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    display: block;
+    content: '.';
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+

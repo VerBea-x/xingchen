@@ -1,0 +1,386 @@
+* {
+    user-select: none;
+}
+body {
+    background-color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.play-wrap {
+    position: relative;
+    /* transition: 1s; */
+}
+.player-control {
+    width: 360px;
+    height: 80px;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+.cover {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-top: -60px;
+    padding: 6px;
+    position: relative;
+    animation: circle 5s infinite linear;
+    animation-play-state: paused;
+    /* animation-play-state: running; */
+    overflow: hidden;
+}
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+.cover::before {
+    content: '';
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+@keyframes circle {
+    0% {
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+.control {
+    height: 40px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.loop-icon {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    background-color: #fff;
+    color: #b3b0b0;
+    position: absolute;
+    top: 30%;
+    right: -50%;
+    line-height: 50px;
+    text-align: centers;
+    border-radius: 10px;
+    transform: translateY(-50%);
+}
+.loop-list {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    right: calc(-10px - 50%);
+    top: -200px;
+    height: 170px;
+    width: 70px;
+    background-color: white;
+    border-radius: 5px;
+    overflow-y: visible;
+}
+.loop-list::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0px;
+    width: 0px;
+    bottom: -29px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: rotate(180deg);
+    border-bottom: 15px solid rgba(255, 255, 255, 1);
+    border-right: 10px solid rgba(255, 255, 255, 0);
+    border-left: 10px solid rgba(255, 255, 255, 0);
+    border-top: 15px solid rgba(255, 255, 255, 0);
+}
+.loop-list li {
+    font-family: 'icomoon';
+    font-size: 20px;
+    color: #b3b0b0;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 50px;
+    background-color: rgba(227, 224, 224, 0.229);
+}
+.loop-list li:hover {
+    background-color: #b3b0b0;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px #9b99996d;
+}
+i {
+    font-family: 'icomoon';
+    line-height: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #b3b0b0;
+    cursor: pointer;
+    transform: all 0.4s;
+    padding: 0 10px;
+}
+.list {
+    font-size: 26px;
+}
+i:hover {
+    background-color: #b3b0b0;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px #9b99996d;
+}
+.play-wrap .player-info {
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    /* top: -90%; */
+    top: 0;
+    transform: translateX(-50%);
+    padding: 10px;
+    z-index: -2;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: rgba(31, 38, 135, 0.37) 0px 8px 32px 0px;
+    -webkit-box-shadow: rgba(31, 38, 135, 0.37) 0px 8px 32px 0px;
+    border-radius: 10px;
+    -webkit-border-radius: 12px;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    /* opacity: 1; */
+    transition: .5s;
+}
+.player-info .info {
+    width: 60%;
+    font-size: 10px;
+}
+.info .name {
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.info .singer-album {
+    color: #757575;
+    line-height: 20px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.info .music-progress {
+    width: 100%;
+}
+.music-progress .progress-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #757575b7;
+    line-height: 15px;
+}
+.music-progress .progress-bar {
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #cccaca;
+    margin-top: 2px;
+    line-height: 4px;
+}
+.music-progress .music-line {
+    height: 4px;
+    width: 0%;
+    background-color: #f2709b;
+    border-radius: 10px;
+    margin-top: 1px;
+}
+.progress-slider {
+    position: absolute;
+    display: none;
+    top: -8px;
+    right: 28.5px;
+    width: 181.59px;
+    height: 4px;
+    -webkit-appearance: none;
+    appearance: none;   
+    background: transparent;
+    cursor: pointer;
+    z-index: 0;
+}
+.progress-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #999797;
+    cursor: pointer;
+} 
+.mask-bg {
+    background-image: url(../image/Die\ For\ You\ \(为你而战\).jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -3;
+    filter: blur(50px);
+}
+.shortcut {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(61, 61, 61, 0.5);
+    height: 100%;
+    width: 100%;
+    display: none;  
+}
+.music-list {
+    height: 100%;
+    width: 30%;
+    width: 0;
+    padding: 20px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-shadow: -10px 0px 30px #9b99996d;
+}
+@keyframes change {
+    from {
+        opacity: 0;
+     
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* @keyframes end {
+    from {
+        opacity: 1;
+     
+    }
+    to {
+        opacity: 0;
+    }
+} */
+.music-list .topnav {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding: 0 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgb(18, 161, 18);
+}
+.music-list .title {
+    height: 40px;
+    color: rgb(30, 205, 149);
+    text-shadow: 2px 2px 8px rgb(30, 205, 149);
+    /* line-height: 40px; */
+}
+.music-list .close {
+    font-family: 'icomoon';
+    margin-top: -10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.4s;
+    color: rgb(98, 98, 98);
+}
+.music-list .close:hover {
+    transform: rotate(180deg);
+    color: rgb(0, 204, 101);
+}
+ul {
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow-y: auto;
+}
+li {
+    list-style: none;
+    padding: 10px 15px;
+    color: rgb(0,0,0);
+    font-weight: 700;
+    /* border-bottom: 1px solid rgb(186, 182, 182); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li .music-name {
+    font-size: large;
+    position: relative;
+}
+/* li .music-name::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 4px;
+    width: 30%;
+    background-color: rgb(0, 204, 101);
+    bottom: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+} */
+/* li .music-name:hover {
+    color: rgb(0, 204, 101);
+}     */
+li .list-start-icon {
+    font-family: 'icomoon';
+    display: inline-block;
+    height: 25px;
+    width: 40px;
+    line-height: 25px;
+    font-size: 22px;
+    padding-left: 3px;
+    text-align: center;
+    background-color: rgb(0, 242, 104);
+    /* border: 2px solid rgb(155, 155, 155); */
+    border-radius: 10px;
+    cursor: pointer;
+}
+li .list-start-icon:hover,
+li .list-start-icon:active {
+    box-shadow: 0 2px 4px gray;
+    border-color: rgb(116, 116, 116);
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    padding-left: 5px;
+}
+li:nth-child(2n-1){
+    background-color: rgba(227, 224, 224, 0.229);
+}
+.green {
+    color: rgb(0, 242, 104);
+}
+.white {
+    color: white;
+}
+.way {
+    display: flex;
+}

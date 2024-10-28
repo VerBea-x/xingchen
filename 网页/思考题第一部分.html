@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+           font-size: 20px;
+           font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <p>1.标签选择器：适用于一类标签，能快速设置统一样式，当有大量样式相似且是同名标签/或者整体元素样式（如改body）更改时使用<br/>2.类选择器：差异化选择不同的标签，用class分类；当需要单独改变部分标签时使用/或想通过特殊命名管理不同区块样式/或将大量重复使用的样式归于一类节省空间<br>3.id选择器：一般用于页面唯一性的元素<br>4.通配符：适合改整体元素基础样式时使用（如清除初始padding）<br>5.后代组合：标签选择器的小范围使用。<br>6.子元素选择器（a>b）：当只更改父元素a的直接子元素b时使用<br>7.相邻选择（a+b）：当只更改a元素后面相邻的一个b元素时使用<br>8.全体相邻选择（a~b）：当更改a元素后面的所有b类元素时使用<br>9.交集选择器：改变同类型中有特定命名的元素<br>10.并集选择器：改变多种元素时<br>11.动态伪类选择器：a和input做样式选用</p>
+    <p>一、行内元素<br>1.text-align：center用于文本水平居中但不改变文本框大小<br/>2.line-height：height用于文本水平垂直居中但不改变文本框大小<br>3.wdith：fit-content加margin：auto用于水平居中，但垂直方向不一定居中且改变了文本框大小<br>二、块级元素<br>1.margin：0 auto用于水平居中但不改变元素大小，一般给网页主体元素使用<br>2.父相子绝定位：父元素position设为relative，子元素为absolute。利用left：50% top：50%再margin-top（left）：-50%height（移动元素的高），适用于水平垂直居中且知道子元素的宽高<br>3.定位加transform：给子元素transform：transplant（-50%，-50%）适用于上种方法不知道子元素高宽时<br>4.定位加margin：给子元素left等四个方向设置为0，再设置margin：auto，当给定子元素大小时不想利用2方法计算时使用<br>5.flex布局：父元素display：flex；justify-centnet；align-content，适用于大多数布局。</p>
+    <p>1、flex布局 2、标准流加float 3、position定位 4、grid网格布局<br/></p>
+    <p>使内容在不同分辨率下清晰醒目；<br/>1、响应式布局：通过media实现一套html配合多套css实现适配<br>2、通过rem、vw、vh，等实现<br>3、同时使用media和rem等比适配</p>
+    <p><br/></p>
+    <p><br/></p>
+</body>
+</html>

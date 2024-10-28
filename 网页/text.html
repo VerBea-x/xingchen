@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      height: 200px;
+      width: 200px;
+      margin: 100px auto;
+      background-color: yellow;
+    }    
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+<script>
+  const box = document.querySelector(".box")
+  box.addEventListener('mousemove',function(e){
+    window.requestAnimationFrame(function(){
+      let boxx = box.getBoundingClientRect()
+      console.log(boxx.height)
+      console.log("--------------------------------------------")
+      console.log(boxx.width)
+      console.log("--------------------------------------------")
+      console.log(boxx.left)
+      console.log("--------------------------------------------")
+      console.log(boxx.top)
+      console.log("--------------------------------------------")
+      console.log(e.clientX - boxx.left)
+      let mouse = e.clientX - boxx.left
+      if(mouse < boxx.width/2 ){
+        console.log("--------------------------")
+        console.log(1)
+      }
+      else {
+        console.log("----------------------------------")
+        console.log(2)
+      }
+    })
+  })
+</script>
+</html>

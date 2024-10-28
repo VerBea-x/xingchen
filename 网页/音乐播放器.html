@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐播放器</title>
+    <link rel="shortcut icon" href="/网页/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../网页/css/base.css">
+    <link rel="stylesheet" href="../网页/css/common.css">
+    <link rel="stylesheet" href="../网页/css/音乐播放器.css">
+</head>
+<body>
+    <div class="play-wrap">
+        <div class="player-info">
+            <div class="info">
+                <div class="name">Die For You</div>
+                <div class="singer-album">无畏契约/Grabbitz-Die For You(为你而战)</div>
+                <div class="music-progress">
+                    <div class="progress-top">
+                        <span class="current-time">00:00</span>
+                        <span class="music-time">03:30</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="music-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="range" min="0" max="100" value="0" class="progress-slider" step="any">
+        <div class="player-control">
+            <div class="cover"><img src="../网页/image/Die For You (为你而战).jpg" alt=""></div>
+            <div class="control">
+                <i class="last-icon"></i>
+                <i class="start-icon"></i>
+                <i class="next-icon"></i>
+                <i class="list-icon"></i>
+                <i class="loop-icon"></i>
+                <ul class="loop-list">
+                    <li class="random"></li>
+                    <li class="list-loop"></li>
+                    <li class="single-loop"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mask-bg"></div>
+    <audio src=""></audio>
+    <div class="shortcut">
+        <div class="music-list">
+            <div class="topnav">
+                <h2 class="title">音乐列表</h2>
+                <span class="close"></span>
+            </div>
+            <ul class="list-content">
+            </ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../网页/js/音乐播放器.js"></script>
+</body>
+</html>
+                    <!-- <span class="music-name">Die For You</span>
+                    <span class="list-start-icon"></span>

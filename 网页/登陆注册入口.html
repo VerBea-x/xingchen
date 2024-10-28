@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登陆注册入口</title>
+    
+    <link rel="shortcut icon" href="/网页/favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="../网页/css/登陆注册入口.css">
+    <link rel="stylesheet" href="../网页/css/base.css">
+    <link rel="stylesheet" href="../网页/css/common.css">
+</head>
+<body>
+    <div class="box">
+        <div class="inner-box left z0">
+            <form action="#" method="post" class="load">
+                <h1>登录账号</h1>
+                <div class="font-icons">
+                    <i class="iconfont icon-qq"></i>
+                    <i class="iconfont icon-weixin"></i>
+                </div>
+                <span class="line"><span>账号 : </span><input type="text" name="user" id="userf" placeholder="请输入邮箱或用户名" autocomplete="off"></span>                
+                <span class="line"><span>密码 : </span><input type="password" name="psd" id="psdf" placeholder="请输入密码" autocomplete="off"></span>
+                <span><a href="#" class="link">忘记密码?</a></span>
+                <button class="form-button load-btn" id="load">登录</button>               
+            </form>
+        </div>
+        <div class="inner-box right z100">
+            <form action="#" method="post" class="register">
+                <h1>注册账号</h1>
+                <span class="line"><span>账号 : </span><span class="users-box"><input class="register-input" type="email" name="user" id="users" placeholder="请输入邮箱" autocomplete="off"><span class="users-signal">请输入正确邮箱格式</span></span></span>
+                <span class="line"><span>用户名 : </span><input class="register-input" type="text" name="userName" id="userName" placeholder="请输入用户名" maxlength="15" autocomplete="off"></span>
+                <span class="line"><span>密码 : </span><span class="psd-eye-box"><input class="register-input" type="password" name="psd" id="psds" placeholder="不超过15个字符" maxlength="15" autocomplete="off"><span class="psd-eye"></span></span></span>
+                <span class="line"><span>重复密码 : </span><span class="psd-icon-box"><input class="register-input" type="password" name="again" id="again" placeholder="请重复密码" maxlength="15" autocomplete="off"><span class="psd-icon"></span></span></span>
+                <span class="line"><span>验证码: </span><input class="register-input" type="text" name="yanzheng" id="yanzheng" placeholder="请输入验证码" maxlength="6" autocomplete="off"></span>
+                <span><span class="cb-box"><input type="checkbox"  class="cb-bd">同意请勾选</span><span><button class="get">获得验证码</button></span></span>
+                <button class="form-button register-btn" id="register">注册账号</button>
+            </form>
+            
+        </div>
+        <div class="switch">
+            <div class="circleBottom" name="circle-1"></div>
+            <div class="circleTop" name="circle-2"></div>
+            <div class="switchLeft">
+                <h2>Welcome Back</h2>
+                <p>已经有账号了吗，那去登录进入网页吧</p>
+                <button class="switch-button">去登录</button>
+            </div>
+            
+            <div class="switchRight  is-hidden">
+                <h2>Nice To Meet You</h2>
+                <p>还没有账号吗，那去注册一个自己的账号吧</p>
+                <button class="switch-button">去注册</button>
+            </div>
+        </div>
+    </div>
+<script src="../网页/js/登陆注册入口.js"></script>
+</body>
+</html>

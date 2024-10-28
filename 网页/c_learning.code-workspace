@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"name": "c_learning",
+			"path": "D:/c_learning"
+		},
+		{
+			"name": "html学习",
+			"path": "../../html学习"
+		},
+		{
+			"path": "../../择栖"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../JavaScript学习"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "星辰",
+		"git.ignoreLimitWarning": true
+	}
+}

@@ -1,0 +1,172 @@
+body {
+    cursor: default;
+}
+.box {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 223, 220);
+    position: relative;
+}
+h1{
+    text-align: center;
+    margin: 2vh;
+    border-bottom: 1px solid white;
+}
+.box .load {
+    border-radius: 8px;
+    height: 55vh;
+    width: 50vw;
+    color: white;
+    background-color: #d3b7d8;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.box .load .left{
+    height: 100%;
+    width: 50%;
+    float: left;
+} 
+.box .load .right {
+    height: 100%;
+    width: 50%;
+    float: right;
+}
+.zhuce div,.denlu div{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: pink; */
+}
+.zhuce span,.denlu span {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+}
+.zhuce div:nth-of-type(-n+3) span:first-of-type,
+.denlu div:nth-of-type(-n+2) span:first-of-type {
+    width: 35%;
+    text-align: center;
+    margin-left: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+.zhuce div span:first-of-type,
+.denlu div span:first-of-type{
+    margin-left: 30px;
+}
+.zhuce div span:last-of-type,
+.denlu div span:last-of-type {
+    width: 60%;
+    text-align: center;
+}
+input {
+    outline: none;
+    height: 40px;
+    width: 90%;
+    font-size: 13px;
+    text-align: center;
+    border: none;
+    background-color: #d3b7d8;
+    border-bottom: 1px solid #a262ad;
+}
+input[type=checkbox] {
+    width: 18px;
+}
+.exam button {
+    height: 40px;
+    width: 120px;
+    font-size: 16px;
+    font-weight: 500;
+    color: skyblue;
+    border: 1px solid #d3b7d8;
+    border-radius: 10px;
+}
+.bottom {
+    margin-top: 3vh;
+}
+.bottom span {
+    width: 30%;
+    text-align: center;
+}
+.bottom span:last-child {
+    width: 50%;
+}
+.bottom span:last-child input {
+    height: 50px;
+    width: 90%;
+    background-color: white;
+    border-radius: 25px;
+    font-size: 18px;
+    color: skyblue;
+}
+.bottom span:last-child input:hover {
+    background-color: #a262ad;
+    color: #f6f6f6;
+    transition: .5s;
+}
+.load .right .dl-btn span {
+    margin-top: 1vh;
+    line-height: 70px;
+    height: 70px;
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+}
+.load .right .dl-btn span input{
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    border-radius: 25px;
+    font-size: 18px;
+    color: skyblue;
+}
+.load .right .dl-btn span input:hover{
+    background-color: #a262ad;
+    color: #f6f6f6;
+    transition: .5s;
+}
+.other {
+    margin-top: 2vh;
+    text-align: center;
+}
+.other .signal{
+    display: inline-block;
+}
+.other-way {
+    width: 50%;
+    margin: 2vh auto ;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    line-height: 30px;
+}
+.other-way span img {
+    width: 3vw;
+}
+.skip {
+    text-align: center;
+}
+.skip button {
+    height: 3.5vh;
+    width: 4vw;
+    background-color: #fff;
+    color: #a262ad;
+    border: 1px solid #d3b7d8;
+    border-radius: 5px;
+}
+.skip button:hover{
+    background-color: #a262ad;
+    color: #fff;
+}
+@media screen and (min-wdith:960px){
+
+}
+@media screen and (max-wdith:960px){
+
+}
+@media screen and (max-wdith:750px){
+
+}
